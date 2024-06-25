@@ -2,6 +2,7 @@ import tkinter
 from tkinter import *
 import pygame.mixer
 import random, time
+import os
 
 def ai_easy():
     def next_turn(row, column):
@@ -953,7 +954,8 @@ def center_window(win):
 
 # where is the music that you want played
     # the r turns it into a string literal because it doesnt like \
-SOUND_FILE = r'C:\Users\jlesc\Music\Tic-Tac-ToeInstra2.mp3'
+music_filename = "Tic-Tac-ToeInstra2.mp3"
+SOUND_FILE = os.path.join(os.path.dirname(__file__), music_filename)
 
 # even tho we imported pygame we still need to include pygame into the event call
 # init = initialize pygame mixer
